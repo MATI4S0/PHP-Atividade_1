@@ -19,19 +19,19 @@
 
         }elseif ($chute > $valorCorreto)
         {
-            print("Você chutou um numero mais alto que o valor correto\n\n");
+            print("\033[31mValor muito alto\033[0m\n\n");
             $vidas = $vidas - 1;
             print("Você possui: $vidas vidas\n");
             $pontos = $pontos - 3;
         }else{
-            print("Você chutou um numero mais baixo que o valor correto\n\n");
+            print("\033[31mValor muito baixo\033[0m\n\n");
             $vidas = $vidas - 1;
             $pontos = $pontos - 3;
             print("Você possui: $vidas vidas\n\n");
         }
 
         if($vidas == 0){
-            print("Você morreu!!");
+            print("\033[31m Você morreu!! \033[0m\n\n");
         }
     }while ($chute != $valorCorreto && $vidas != 0);
 
