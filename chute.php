@@ -14,7 +14,7 @@
 
         if($chute == $valorCorreto)
         {
-            print("\nVocê acertou o valor!!\n");
+            print("\033[32m\nVocê acertou o valor!!\033[0m\n");
             $pontos = $pontos + 15;
 
         }elseif ($chute > $valorCorreto)
@@ -35,5 +35,5 @@
         }
     }while ($chute != $valorCorreto && $vidas != 0);
 
-    print("\nTotal de pontos: $pontos");
+    print("\nTotal de pontos: $pontos\n");
 
